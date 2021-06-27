@@ -73,9 +73,9 @@ class Page():
             print(title + ': ' + url)
             imageNum = 1
             try:
-                os.mkdir(board + '\\' + title)
+                os.mkdir('./' + board + '/' + title)
             except FileExistsError as esc: #File already exists
-                if not sameTitle:   #Same title but bot same page
+                if not sameTitle:   #Same title but not same page
                     sameTitle = True
                     imageNum = len(os.listdir(board + '\\' + title))
                     pass
@@ -90,7 +90,7 @@ class Page():
                     res.raise_for_status()
                 except: #404
                     print('Not found for url: ' + imageUrl.string)
-                imageFile = open(board + '\\' + title + '\\' + title + '_' + str(imageNum) + '.jpg', 'wb')
+                imageFile = open('./' + board + '/' + title + '/' + title + '_' + str(imageNum) + '.jpg', 'wb')
                 for chunk in res.iter_content(100000):
                     imageFile.write(chunk)
                 imageNum+=1
@@ -104,7 +104,7 @@ class Gui():
         self.window.geometry('1024x768')
         self.window.configure(background = 'white')
 
-        self.image=Image.open(r'C:\Users\King\Desktop\code\imgur.png')
+        self.image=Image.open(r'./imgur.png')
         self.image=ImageTk.PhotoImage(self.image)
         self.imageLabel=tk.Label(self.window,image = self.image)
         self.imageLabel.pack()
