@@ -1,13 +1,5 @@
-# Ptt-Image-Download
-  此為Ptt圖片爬蟲程式，會依據爬取看板建立資料夾，再由各個文章名稱建立資料夾，最後文章內的圖片皆會下載至各自文章的資料夾中
+# Ptt Image Scrape
+  It will create a folder based on the crawling board, and then create a folder based on the name of each article. Finally, the pictures in the article will be downloaded to the folder of the respective article
 
-## Install
-  ```bash
-  $ pip install requests
-  ```
-  ```bash
-  $ pip install beautifulSoup4
-  ```
-  ```bash
-  $ pip install pillow
-  ```
+## Usage
+<img width="1023" alt="截圖 2021-07-27 上午11 40 05" src="https://user-images.githubusercontent.com/69250053/127099621-cb6a9c59-ca60-4cb8-acf8-9a850489916a.png">
